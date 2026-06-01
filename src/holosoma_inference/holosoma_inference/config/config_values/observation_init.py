@@ -113,7 +113,6 @@ wbt = ObservationConfig(
             "dof_pos",
             "dof_vel",
             "actions",
-            "obj_pos_b"
         ]
     },
     obs_dims={
@@ -125,7 +124,6 @@ wbt = ObservationConfig(
         "dof_pos": 29,
         "dof_vel": 29,
         "actions": 29,
-        "obj_pos_b": 3
     },
     obs_scales={
         "actions": 1.0,
@@ -138,7 +136,6 @@ wbt = ObservationConfig(
         "dof_vel": 1.0,
         "robot_body_pos_b": 1.0,
         "robot_body_ori_b": 1.0,
-        "obj_pos_b": 1.0
     },
     history_length_dict={
         "actor_obs": 1,

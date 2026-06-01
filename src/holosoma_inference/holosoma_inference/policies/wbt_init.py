@@ -253,9 +253,6 @@ class WholeBodyTrackingPolicy(BasePolicy):
         # actions
         current_obs_buffer_dict["actions"] = self.last_policy_action
 
-        # obj_pos_b
-        current_obs_buffer_dict["obj_pos_b"] = np.zeros(3,dtype=np.float32)
-
         return current_obs_buffer_dict
 
     def rl_inference(self, robot_state_data):
@@ -266,7 +263,6 @@ class WholeBodyTrackingPolicy(BasePolicy):
             self.curr_motion_timestep = self.timestep_util.timestep
 
         obs = self.prepare_obs_for_rl(robot_state_data)
-        print("obs:",obs)
         if self.config.task.print_observations:
             self._print_observations(obs)
 
